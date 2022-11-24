@@ -25,7 +25,7 @@ nav ul li a, nav ul li span, header .action { display: block; padding: 0.5rem; }
 input.danger { color: #cc2f2e; }
 input[type=submit] { align-self: start; min-width: 10em; }
 
-input{
+input,textarea{
     border:solid 1.5px lightgray; 
     /* box-shadow: 3px 2px 2px #555; */
     border-radius:5px;
@@ -44,4 +44,23 @@ input{
     color:#fff;
     border-radius:5px;
     box-shadow: 3px 2px 2px #555;
+}
+
+#button-style-red{
+    display:block;
+    width:300px;
+    margin-top:70px;
+    margin-left:auto;
+    margin-right:auto;
+    height:40px;
+    border:none;
+    background:red;
+    color:#fff;
+    border-radius:5px;
+    box-shadow: 3px 2px 2px #555;
+}
+
+#button-style:hover,#button-style-red:hover{
+    cursor: pointer;
+    box-shadow: 4px 3px 3px #555;
 }
