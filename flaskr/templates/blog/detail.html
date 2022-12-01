@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}記事： "{{ post['title'] }}"{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<!-- <p class="body">{{ post['body'] }}</p> -->
+<article class="post">
+    <header>
+      <div>
+        <div class="about">by {{ post['username'] }} on {{ post['created'].strftime('%Y-%m-%d') }}</div>
+      </div>
+      {% if g.user['id'] == post['author_id'] %}
+        <a class="action" href="{{ url_for('blog.update', id=post['id']) }}">編集</a>
+      {% endif %}
+    </header>
+    <p class="body">{{ post['body'] }}</p>
+  </article>
+{% endblock %}
